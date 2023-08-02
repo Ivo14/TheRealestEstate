@@ -1,26 +1,26 @@
 <div class="flex justify-center items-center h-full">
     <div class="max-w-md w-full p-6 space-y-6 bg-white rounded-lg shadow-md">
-        <h1 class="text-2xl font-bold text-center">Edit your rentout</h1>
+        <h1 class="text-2xl font-bold text-center">Edite su alquiler</h1>
         <form [formGroup]="sellForm" (ngSubmit)="handleSubmit()">
             <div class="space-y-4">
                 <div>
-                    <label for="type" class="text-gray-600 block">Type</label>
+                    <label for="type" class="text-gray-600 block">Tipo</label>
                     <input type="text" name="type" formControlName="type" class="form-input border border-gray-300 rounded-md p-2 w-full">
                     <!-- email error handling -->
                     <div *ngIf="sellForm.get('type')?.touched" class="text-red-500">
                         <div *ngIf="sellForm.get('type')?.errors?.['required']">
-                            Type is required!
+                            ¡Se requiere tipo!
                         </div>
                     </div>
                 </div>
                 
                 <div>
-                    <label for="location" class="text-gray-600 block">Location</label>
+                    <label for="location" class="text-gray-600 block">Ubicación</label>
                     <input type="text" name="location" formControlName="location" class="form-input border border-gray-300 rounded-md p-2 w-full">
                     <!-- password error handling -->
                     <div *ngIf="sellForm.get('location')?.touched" class="text-red-500">
                         <div *ngIf="sellForm.get('location')?.errors?.['required']">
-                            Location is required!
+                            ¡Se requiere ubicación!
                         </div>
                     </div>
                 </div>
@@ -31,40 +31,40 @@
                     <!-- repeatPassword error handling -->
                     <div *ngIf="sellForm.get('imageUrl')?.touched" class="text-red-500">
                         <div *ngIf="sellForm.get('imageUrl')?.errors?.['required']">
-                            ImageUrl is required!
+                            ¡Se requiere imageUrl!
                         </div>
                     </div>
                 </div>
 
                 <div>
-                    <label for="description" class="text-gray-600 block">Description</label>
+                    <label for="description" class="text-gray-600 block">Descripción</label>
                     <input type="text" name="description" formControlName="description" class="form-input border border-gray-300 rounded-md p-2 w-full">
                     <!-- repeatPassword error handling -->
                     <div *ngIf="sellForm.get('description')?.touched" class="text-red-500">
                         <div *ngIf="sellForm.get('description')?.errors?.['required']">
-                            Description is required!
+                            ¡Se requiere una descripción!
                         </div>
                     </div>
                 </div>
 
                 <div>
-                    <label for="area" class="text-gray-600 block">Area</label>
+                    <label for="area" class="text-gray-600 block">Área</label>
                     <input type="number" name="area" formControlName="area" class="form-input border border-gray-300 rounded-md p-2 w-full">
                     <!-- repeatPassword error handling -->
                     <div *ngIf="sellForm.get('area')?.touched" class="text-red-500">
                         <div *ngIf="sellForm.get('area')?.errors?.['required']">
-                            Area is required!
+                            ¡Se requiere un área!
                         </div>
                     </div>
                 </div>
 
                 <div>
-                    <label for="rent" class="text-gray-600 block">Rent</label>
+                    <label for="rent" class="text-gray-600 block">Alquiler</label>
                     <input type="number" name="rent" formControlName="rent" class="form-input border border-gray-300 rounded-md p-2 w-full">
                     <!-- repeatPassword error handling -->
                     <div *ngIf="sellForm.get('rent')?.touched" class="text-red-500">
                         <div *ngIf="sellForm.get('rent')?.errors?.['required']">
-                            Rent is required!
+                            ¡Se requiere alquiler!
                         </div>
                     </div>
                 </div>

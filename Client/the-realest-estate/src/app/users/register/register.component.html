@@ -1,43 +1,43 @@
 <div class="flex justify-center items-center h-full">
     <div class="max-w-md w-full p-6 space-y-6 bg-white rounded-lg shadow-md">
-        <h1 class="text-2xl font-bold text-center">Create an account</h1>
+        <h1 class="text-2xl font-bold text-center">Crea una cuenta</h1>
         <form [formGroup]="registerForm" (ngSubmit)="handleSubmit()">
             <div class="space-y-4">
                 <div>
-                    <label for="email" class="text-gray-600 block">Email</label>
+                    <label for="email" class="text-gray-600 block">Correo electrónico</label>
                     <input type="text" name="email" formControlName="email" class="form-input border border-gray-300 rounded-md p-2 w-full">
                     <!-- email error handling -->
                     <div *ngIf="registerForm.get('email')?.touched" class="text-red-500">
                         <div *ngIf="registerForm.get('email')?.errors?.['required']">
-                            Email is required!
+                            ¡Correo electronico es requerido!
                         </div>
                         <div *ngIf="registerForm.get('email')?.errors?.['email']">
-                            Email is not valid!
+                            ¡El correo no es válido!
                         </div>
                     </div>
                 </div>
                 
                 <div>
-                    <label for="password" class="text-gray-600 block">Password</label>
+                    <label for="password" class="text-gray-600 block">Contraseña</label>
                     <input type="password" name="password" formControlName="password" class="form-input border border-gray-300 rounded-md p-2 w-full">
                     <!-- password error handling -->
                     <div *ngIf="registerForm.get('password')?.touched" class="text-red-500">
                         <div *ngIf="registerForm.get('password')?.errors?.['required']">
-                            Password is required!
+                            ¡Se requiere contraseña!
                         </div>
                         <div *ngIf="registerForm.get('password')?.errors?.['minlength']">
-                            Password too short!
+                            ¡Contraseña demasiado corta!
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="repeatPassword" class="text-gray-600 block">Repeat password</label>
+                    <label for="repeatPassword" class="text-gray-600 block">Repita la contraseña</label>
                     <input type="password" name="repeatPassword" formControlName="repeatPassword" class="form-input border border-gray-300 rounded-md p-2 w-full">
                     <!-- repeatPassword error handling -->
                     <div *ngIf="registerForm.get('repeatPassword')?.touched" class="text-red-500">
                         <div *ngIf="registerForm.hasError('passwordMismatch')">
-                            Passwords do not match!
+                            ¡Las contraseñas no coinciden!
                         </div>
                     </div>
                 </div>
@@ -46,9 +46,9 @@
                 </div>
             </div>
 
-            <button class="btn bg-gray-200 mt-6 w-full">Register</button>
+            <button class="btn bg-gray-200 mt-6 w-full">Registrar</button>
             
-            <p class="text-center text-gray-600 mt-4">Already have an account? <a routerLink="/login" class="text-blue-500 hover:text-blue-700">Login</a></p>
+            <p class="text-center text-gray-600 mt-4">¿Ya tienes una cuenta? <a routerLink="/login" class="text-blue-500 hover:text-blue-700">Iniciar sesión</a></p>
         </form>
     </div>
 </div>

@@ -6,20 +6,20 @@
         </h1>
         <nav class="ml-4">
           <ul class="flex space-x-4">
-            <li><a routerLink="/buy" class="text-black hover:text-gray-300">Buy estates</a></li>
-            <li><a routerLink="/rent" class="text-black hover:text-gray-300">Rent estates</a></li>
+            <li><a routerLink="/buy" class="text-black hover:text-gray-300">Comprar fincas</a></li>
+            <li><a routerLink="/rent" class="text-black hover:text-gray-300">Alquiler de fincas</a></li>
             
-            <li *ngIf="authService.isLoggedIn"><a routerLink="/add" class="text-black hover:text-gray-300">Add listing</a></li>
+            <li *ngIf="authService.isLoggedIn"><a routerLink="/add" class="text-black hover:text-gray-300">Agregar listado</a></li>
           </ul>
         </nav>
       </div>
       <div class="flex items-center" *ngIf="!authService.isLoggedIn">
-        <a routerLink="/login" class="btn btn-primary btn-sm mr-2 custom-rosybrown text-black hover:text-gray-300">Login</a>
-        <a routerLink="/register" class="btn btn-primary btn-sm mr-2 custom-rosybrown text-black hover:text-gray-300">Register</a>
+        <a routerLink="/login" class="btn btn-primary btn-sm mr-2 custom-rosybrown text-black hover:text-gray-300">Iniciar sesión</a>
+        <a routerLink="/register" class="btn btn-primary btn-sm mr-2 custom-rosybrown text-black hover:text-gray-300">Registrar</a>
       </div>
         <div class="flex items-center" *ngIf="authService.isLoggedIn">
-            <a routerLink="/profile" class="btn btn-primary btn-sm mr-2 custom-rosybrown text-black hover:text-gray-300">Profile</a>
-            <a href="#" class="btn btn-primary btn-sm mr-2 custom-rosybrown text-black hover:text-gray-300" (click)="logout()">Logout</a>
+            <a routerLink="/profile" class="btn btn-primary btn-sm mr-2 custom-rosybrown text-black hover:text-gray-300">Perfil</a>
+            <a href="#" class="btn btn-primary btn-sm mr-2 custom-rosybrown text-black hover:text-gray-300" (click)="logout()">Cerrar sesión</a>
           </div>
     </div>
   </header>

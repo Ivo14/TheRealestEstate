@@ -14,20 +14,20 @@
         <div class="flex flex-col justify-center text-center">
             <img class="mb-4" src="{{rent?.imageUrl}}" alt="">
             <span class="text-gray-700">{{rent?.description}}</span>
-            <h1 class="text-lg font-bold">{{rent?.area}} square meters</h1>
+            <h1 class="text-lg font-bold">{{rent?.area}} metros cuadrados</h1>
         </div>
 
         <hr class="my-4">
 
         <!-- For owner -->
         <div class="flex justify-center space-x-4" *ngIf="isOwner">
-            <button class="btn" routerLink="/rent/{{rent?._id}}/edit">Edit</button>
-            <button class="btn" (click)="deleteRent()">Delete</button>
+            <button class="btn" routerLink="/rent/{{rent?._id}}/edit">Editar</button>
+            <button class="btn" (click)="deleteRent()">Borrar</button>
         </div>
 
         <!-- For user -->
         <div class="flex justify-center space-x-4" *ngIf="!isOwner">
-            <button class="btn" (click)="openPopup()">Contact</button>
+            <button class="btn" (click)="openPopup()">Contacto</button>
         </div>
         <app-contact-popup *ngIf="showPopup" [email]="ownerEmail" (close)="closePopup()"></app-contact-popup>
     </div>

@@ -1,10 +1,10 @@
 <div *ngIf="!loaderService.isLoading" class="container mx-auto px-4 py-8">
     <div class="mx-auto bg-white rounded-md shadow-md p-6">
-      <h1 class="text-2xl font-bold mb-4">User Profile</h1>
+      <h1 class="text-2xl font-bold mb-4">Perfil del usuario</h1>
   
       <!-- User Email -->
       <div class="mb-4">
-        <label for="email" class="text-gray-700">Email:</label>
+        <label for="email" class="text-gray-700">Correo electrónico:</label>
         <p id="email" class="mt-1 text-gray-900 font-medium">{{email}}</p>
       </div>
   
@@ -21,11 +21,11 @@
             <p class="mt-2 text-gray-900 font-medium">${{listing?.price || listing?.rent}}</p>
 
             <a *ngIf="listing?.rent != undefined" routerLink="/rent/{{listing._id}}">
-              <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md">Details</button>
+              <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md">Detalles</button>
             </a>
 
             <a *ngIf="listing?.price != undefined" routerLink="/buy/{{listing._id}}">
-              <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md">Details</button>
+              <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md">Detalles</button>
             </a>
           </div>
         </div>
